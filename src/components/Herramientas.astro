@@ -1,0 +1,154 @@
+<section class="herramientas section" id="herramientas">
+  <h2 class="section-title">Herramientas Digitales</h2>
+  <div class="herramientas-grid grid grid-4">
+    <div class="herramienta-card card">
+      <div class="herramienta-icon canva">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zM7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 15h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+        </svg>
+      </div>
+      <h3>Canva</h3>
+      <p>Elaboración de moodboards y presentaciones</p>
+    </div>
+
+    <div class="herramienta-card card">
+      <div class="herramienta-icon pinterest">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+      </div>
+      <h3>Pinterest</h3>
+      <p>Búsqueda de referencias e inspiración</p>
+    </div>
+
+    <div class="herramienta-card card">
+      <div class="herramienta-icon trends">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+        </svg>
+      </div>
+      <h3>Google Trends</h3>
+      <p>Investigación de tendencias de moda</p>
+    </div>
+
+    <div class="herramienta-card card">
+      <div class="herramienta-icon social">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+        </svg>
+      </div>
+      <h3>Redes Sociales</h3>
+      <p>Instagram, TikTok para tendencias</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .herramientas {
+    background: var(--color-bg);
+  }
+
+  .herramientas-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .herramienta-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .herramienta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent-gold), var(--color-accent-dark));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .herramienta-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .herramienta-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .herramienta-card:hover .herramienta-icon {
+    transform: scale(1.1);
+  }
+
+  .herramienta-icon svg {
+    width: 35px;
+    height: 35px;
+    fill: var(--color-white);
+  }
+
+  .herramienta-icon.canva {
+    background: linear-gradient(135deg, #00C4CC, #7D2AE8);
+  }
+
+  .herramienta-icon.pinterest {
+    background: linear-gradient(135deg, #E60023, #BD081C);
+  }
+
+  .herramienta-icon.trends {
+    background: linear-gradient(135deg, #4285F4, #34A853);
+  }
+
+  .herramienta-icon.social {
+    background: linear-gradient(135deg, #E1306C, #F77737);
+  }
+
+  .herramienta-card h3 {
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .herramienta-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .herramientas-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .herramienta-card {
+      padding: 2rem 1rem;
+    }
+
+    .herramienta-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .herramienta-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .herramientas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

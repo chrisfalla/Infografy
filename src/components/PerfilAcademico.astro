@@ -1,0 +1,84 @@
+<section class="perfil section" id="perfil">
+  <h2 class="section-title">Perfil Académico</h2>
+  <div class="perfil-content">
+    <div class="perfil-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+      </svg>
+    </div>
+    <div class="perfil-text">
+      <p class="perfil-description">
+        Estudiante de <strong>Diseño de Modas</strong>, con formación en diseño, patronaje, confección, teoría del color, investigación de tendencias y desarrollo de propuestas de vestuario.
+      </p>
+      <p class="perfil-description">
+        Interesada en fortalecer tanto las habilidades creativas como las técnicas y digitales relacionadas con la industria de la moda.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .perfil {
+    background: var(--color-white);
+  }
+
+  .perfil-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .perfil-icon {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .perfil-icon svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--color-white);
+  }
+
+  .perfil-text {
+    flex: 1;
+  }
+
+  .perfil-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+
+  .perfil-description strong {
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .perfil-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .perfil-icon {
+      width: 100px;
+      height: 100px;
+    }
+
+    .perfil-icon svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>

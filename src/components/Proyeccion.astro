@@ -1,0 +1,202 @@
+<section class="proyeccion section" id="proyeccion">
+  <h2 class="section-title">Proyección Profesional</h2>
+  <div class="proyeccion-content">
+    <div class="proyeccion-card corto-plazo">
+      <div class="proyeccion-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+        </svg>
+      </div>
+      <span class="proyeccion-label">Corto Plazo</span>
+      <h3>Fortalecimiento de Habilidades</h3>
+      <ul class="proyeccion-list">
+        <li>Patronaje y confección</li>
+        <li>Diseño y tendencias</li>
+        <li>Herramientas digitales</li>
+        <li>Creatividad e innovación</li>
+      </ul>
+    </div>
+
+    <div class="proyeccion-divider">
+      <div class="divider-line"></div>
+      <div class="divider-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="proyeccion-card largo-plazo">
+      <div class="proyeccion-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <span class="proyeccion-label">Largo Plazo</span>
+      <h3>Visión Profesional</h3>
+      <ul class="proyeccion-list">
+        <li>Crear mi propia marca</li>
+        <li>Trabajar en proyectos de diseño</li>
+        <li>Desarrollar identidad creativa propia</li>
+        <li>Crear propuestas innovadoras</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .proyeccion {
+    background: var(--color-white);
+  }
+
+  .proyeccion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .proyeccion-card {
+    flex: 1;
+    background: var(--color-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .proyeccion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-accent-gold), var(--color-accent-dark));
+  }
+
+  .proyeccion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .proyeccion-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .proyeccion-icon svg {
+    width: 35px;
+    height: 35px;
+    fill: var(--color-white);
+  }
+
+  .proyeccion-label {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--color-accent-gold);
+    color: var(--color-white);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .proyeccion-card h3 {
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .proyeccion-list {
+    list-style: none;
+    text-align: left;
+  }
+
+  .proyeccion-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .proyeccion-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .proyeccion-list li:last-child {
+    border-bottom: none;
+  }
+
+  .proyeccion-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .divider-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, transparent, var(--color-accent-gold), transparent);
+  }
+
+  .divider-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--color-accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divider-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-white);
+  }
+
+  @media (max-width: 768px) {
+    .proyeccion-content {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .proyeccion-card {
+      width: 100%;
+      padding: 2rem 1.5rem;
+    }
+
+    .proyeccion-divider {
+      flex-direction: row;
+    }
+
+    .divider-line {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+    }
+  }
+</style>

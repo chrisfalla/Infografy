@@ -1,0 +1,172 @@
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-label">Diseñadora de Modas</span>
+    <h1 class="hero-title">Mi Perfil Profesional</h1>
+    <p class="hero-subtitle">Estudiante de Diseño de Modas</p>
+    <p class="hero-description">
+      Creatividad, innovación y pasión por el diseño de moda femenina.
+      Explorando tendencias, desarrollando colecciones y construyendo mi identidad creativa.
+    </p>
+    <div class="hero-tags">
+      <span class="tag">Diseño de Colecciones</span>
+      <span class="tag">Patronaje</span>
+      <span class="tag">Confección</span>
+      <span class="tag">Tendencias</span>
+    </div>
+  </div>
+  <div class="hero-decoration">
+    <div class="decoration-circle circle-1"></div>
+    <div class="decoration-circle circle-2"></div>
+    <div class="decoration-circle circle-3"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-cream) 100%);
+    padding: 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero-label {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-dark));
+    color: var(--color-white);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--color-accent-brown);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hero-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+
+  .circle-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-accent-gold);
+    top: -100px;
+    right: -100px;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .circle-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent-dark);
+    bottom: -80px;
+    left: -80px;
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  .circle-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-accent-brown);
+    top: 50%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: 6rem 1.5rem 4rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .circle-1 {
+      width: 250px;
+      height: 250px;
+    }
+
+    .circle-2 {
+      width: 180px;
+      height: 180px;
+    }
+
+    .circle-3 {
+      width: 120px;
+      height: 120px;
+    }
+  }
+</style>
